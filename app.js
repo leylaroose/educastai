@@ -224,7 +224,7 @@
           <div class="chat-actions">
             <button class="chat-action" type="button">
               <img class="chat-action-icon" src="book.png" alt="" aria-hidden="true" />
-              Zeig mir ein konkretes Beispiel
+              Zeig mir ein konkretes Beispiel.
             </button>
             <button class="chat-action" type="button">
               <img class="chat-action-icon" src="lautsprecher.png" alt="" aria-hidden="true" />
