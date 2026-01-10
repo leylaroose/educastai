@@ -64,10 +64,52 @@
         justify-content: center;
       }
 
+      .stage-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .desktop-logo-wrap {
+        display: none;
+        width: min(520px, 38vw);
+        margin-right: 120px;
+        margin-top: 0px;
+        text-align: center;
+      }
+
+      .desktop-logo {
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.35));
+      }
+
+      .desktop-logo-subhead {
+        margin-top: 18px;
+        font-family: "Stack Sans Text", "Segoe UI", Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        color: #ffffff;
+      }
+
+      .desktop-logo-subhead-img {
+        display: block;
+        width: min(260px, 20vw);
+        height: auto;
+        margin: 200px auto 0;
+      }
+
       .phone {
         position: relative;
         width: calc(var(--phone-width) * var(--phone-scale));
         height: calc(var(--phone-height) * var(--phone-scale));
+      }
+
+      @media (min-width: 1024px) {
+        .desktop-logo-wrap {
+          display: block;
+        }
       }
 
       .phone-shell {
