@@ -15,7 +15,16 @@
         --screen: #0b1d2a;
         --phone-width: 1206px;
         --phone-height: 2622px;
-        --phone-scale: 0.35;
+        --phone-scale: clamp(
+          0.22,
+          min(
+            0.35,
+            calc((100svh - 200px) / var(--phone-height)),
+            calc((100vw - 120px) / var(--phone-width))
+          ),
+          0.35
+        );
+        --stage-pad: clamp(24px, 4vw, 80px);
         --player-bg: #f4fbff;
         --player-ink: #0d2230;
         --player-soft: #5b7280;
@@ -58,6 +67,8 @@
         position: relative;
         width: 100%;
         height: 100%;
+        min-height: 100svh;
+        padding: var(--stage-pad);
         background: var(--bg);
         display: flex;
         align-items: center;
@@ -68,14 +79,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: clamp(28px, 6vw, 120px);
+        width: min(1200px, 100%);
       }
 
       .desktop-logo-wrap {
         display: none;
         width: min(520px, 38vw);
-        margin-right: 120px;
+        margin-right: 0;
         margin-top: 0px;
         text-align: center;
+        flex: 0 1 min(520px, 38vw);
       }
 
       .desktop-logo {
@@ -104,11 +119,16 @@
         position: relative;
         width: calc(var(--phone-width) * var(--phone-scale));
         height: calc(var(--phone-height) * var(--phone-scale));
+        flex: 0 0 auto;
       }
 
       @media (min-width: 1024px) {
         .desktop-logo-wrap {
           display: block;
+        }
+
+        .stage-content {
+          flex-wrap: nowrap;
         }
       }
 
