@@ -108,6 +108,17 @@
         color: #ffffff;
       }
 
+      .phone-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .phone-cta {
+        margin: 0 0 8px;
+        text-align: center;
+      }
+
       .desktop-logo-subhead-img {
         display: block;
         width: min(260px, 20vw);
@@ -2294,3 +2305,4 @@
       .recommend-arrow {
         font-size: var(--text-base);
       }
+
