@@ -46,7 +46,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"></svg>
           </button>
           <h3>Algorithmen &amp; <br>Datenstrukturen</h3>
-          <p><strong>Einführung</strong></p>
+          <p><strong>Binary Search Trees</strong></p>
           <div class="continue-meta">
             <span class="meta-clock"></span>
             12 Min. verbleibend
