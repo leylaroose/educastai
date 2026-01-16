@@ -81,7 +81,9 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: clamp(28px, 6vw, 120px);
-        width: min(1200px, 100%);
+        width: fit-content;
+        max-width: 100%;
+        margin: 0 auto;
       }
 
       .desktop-logo-wrap {
